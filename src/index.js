@@ -1,15 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux';
+import {BrowserRouter} from 'react-router-dom'
 import store from './store'
-import App from './App'
+import Layout from './layouts/layout'
 import {AppContainer} from 'react-hot-loader'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
     <AppContainer>
         <Provider store={store}>
-            <App />
+            <BrowserRouter>   
+                <Layout />
+            </BrowserRouter>
         </Provider>
     </AppContainer>,
     document.getElementById('root')
