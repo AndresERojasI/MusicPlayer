@@ -9,70 +9,20 @@ import {
 
 class Service{
     constructor() {
-        this.api = axios().create({
+        this.api = axios.create({
             baseURL: 'https://rubytify.herokuapp.com/api/v1'
         })
     }
     
-    getGenres = async () => {
-        try {
-            return await this.api.get('/genres')
-        } catch (error) {
-            console.error(ERROR_FETCHING_GENRE_LIST);
-            return {
-                data: {},
-                error: ERROR_FETCHING_GENRE_LIST
-            }
-        }
-    }
+    getGenres = () => this.api.get('/genres')
 
-    getArtists = async () => {
-        try {
-            return await this.api.get('/artists')
-        } catch (error) {
-            console.error(ERROR_FETCHING_ARTISTS_LIST);
-            return {
-                data: {},
-                error
-            }
-        }
-    }
+    getArtists = () => this.api.get('/artists')
 
-    getArtistAlbums = async artist_id => {
-        try {
-            return await this.api.get(`artists/${artist_id}/albums`)
-        } catch (error) {
-            console.error(ERROR_FETCHING_ARTIST_ALBUMS);
-            return {
-                data: {},
-                error
-            }
-        }
-    }
+    getArtistAlbums = artist_id => this.api.get(`artists/${artist_id}/albums`)
 
-    getAlbumSongs = async album_id => {
-        try {
-            return await this.api.get(`albums/${album_id}/songs`)
-        } catch (error) {
-            console.error(ERROR_FETCHING_ALBUM_SONGS);
-            return {
-                data: {},
-                error
-            }
-        }
-    }
+    getAlbumSongs = album_id => this.api.get(`albums/${album_id}/songs`)
 
-    getRandomSong = async genre_name => {
-        try {
-            return await this.api.get(`genres/${genre_name}/random_song`)
-        } catch (error) {
-            console.error(ERROR_FETCHING_RANDOM_SONG);
-            return {
-                data: {},
-                error
-            }
-        }
-    }
+    getRandomSong = genre_name => this.api.get(`genres/${genre_name}/random_song`)
 }
 
 export default new Service();

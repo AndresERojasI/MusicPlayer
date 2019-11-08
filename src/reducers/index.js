@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import testReducer from './test_reducer'
+import GenreReducers from './genre_reducer'
 
 export default combineReducers({
-    testReducer
+    genre: GenreReducers
 })
