@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux'
-import GenreReducers from './genre_reducer'
+import genres from './genre_reducer'
+import artists from './artists_reducer'
 
 export default combineReducers({
-    genre: GenreReducers
+    genres,
+    artists
 })

@@ -32,16 +32,16 @@ export class List extends Component {
 }
 
 List.propTypes = {
-    genres: PropTypes.array
+    list: PropTypes.array
 }
 
 List.defaultProps = {
-    genres: []
+    list: []
 }
 
 const mapStateToProps = (state) => ({
-    loading: state.genre.loading,
-    list: state.genre.genreList
+    loading: state.genres.loading,
+    list: state.genres.genreList
 })
 
 const mapDispatchToProps = {

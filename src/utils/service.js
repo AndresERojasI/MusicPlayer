@@ -1,11 +1,4 @@
 import axios from 'axios';
-import {
-    ERROR_FETCHING_GENRE_LIST,
-    ERROR_FETCHING_ARTISTS_LIST,
-    ERROR_FETCHING_ARTIST_ALBUMS,
-    ERROR_FETCHING_ALBUM_SONGS,
-    ERROR_FETCHING_RANDOM_SONG
-} from '../constants/errors.js'
 
 class Service{
     constructor() {
