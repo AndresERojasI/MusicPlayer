@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "../pages/home";
 import Genres from "../pages/genres/genres";
 import Artists from "../pages/artists/artists";
-import Sidebar from "../components/sidebar";
+import Sidebar from "../components/sidebar/sidebar";
 import styles from "./layout.scss";
 
 // Material Components

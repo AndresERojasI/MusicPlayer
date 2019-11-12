@@ -21,8 +21,8 @@ export class List extends Component {
     artists.map(artist => (
       <Grid item xs={3} key={artist.id}>
         <Card className={styles.artist_list_item} >
-          <Link to={`/artists/${artist.id}`} style={{ textDecoration: "none" }}>
-            <CardActionArea>
+          <Link to={`/artists/${artist.id}`} >
+            <CardActionArea className={styles.card_link}>
               <CardMedia
                 className={styles.artist_list_media}
                 image={artist.image}
