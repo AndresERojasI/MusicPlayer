@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Home from "../pages/home";
-import Genres from "../pages/genres/list";
-import Artists from "../pages/artists";
+import Genres from "../pages/genres/genres";
+import Artists from "../pages/artists/artists";
 import Sidebar from "../components/sidebar";
 import styles from "./layout.scss";
 
