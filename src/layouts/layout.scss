@@ -1,0 +1,21 @@
+$sidebar-width: 240;
+
+.main {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    flex-grow: 1;
+    height: '100vh';
+    padding: 1rem;
+}
+
+.drawer {
+    width: $sidebar-width + 0px;
+    flex-shrink: 0;
+  }
+
+.drawerPaper {
+    width: $sidebar-width + 0px;
+}

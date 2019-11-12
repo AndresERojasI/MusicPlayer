@@ -5,6 +5,7 @@
   "homepage": "http://AndresERojasI.github.io/MusicPlayer",
   "dependencies": {
     "@babel/runtime": "^7.7.2",
+    "@material-ui/core": "^4.6.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"
@@ -44,6 +45,7 @@
     "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "clsx": "^1.0.4",
     "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
     "dotenv": "^8.2.0",
