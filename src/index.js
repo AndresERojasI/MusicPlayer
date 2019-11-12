@@ -24,9 +24,9 @@ ReactDOM.render(
 serviceWorker.unregister()
 
 if (module.hot) {
-    module.hot.accept('./App', () => {
+    module.hot.accept('./layouts/layout', () => {
 
-        const NextApp = require('./App').default
+        const NextApp = require('./layouts/layout').default
 
         ReactDOM.render (<AppContainer>
             <NextApp/>

@@ -1,21 +1,22 @@
-import axios from 'axios';
+import axios from "axios";
 
-class Service{
-    constructor() {
-        this.api = axios.create({
-            baseURL: 'https://rubytify.herokuapp.com/api/v1'
-        })
-    }
-    
-    getGenres = () => this.api.get('/genres')
+class Service {
+  constructor() {
+    this.api = axios.create({
+      baseURL: "https://rubytify.herokuapp.com/api/v1"
+    });
+  }
 
-    getArtists = () => this.api.get('/artists')
+  getGenres = () => this.api.get("/genres");
 
-    getArtistAlbums = artist_id => this.api.get(`artists/${artist_id}/albums`)
+  getArtists = () => this.api.get("/artists");
 
-    getAlbumSongs = album_id => this.api.get(`albums/${album_id}/songs`)
+  getArtistAlbums = artist_id => this.api.get(`artists/${artist_id}/albums`);
 
-    getRandomSong = genre_name => this.api.get(`genres/${genre_name}/random_song`)
+  getAlbumSongs = album_id => this.api.get(`albums/${album_id}/songs`);
+
+  getRandomSong = genre_name =>
+    this.api.get(`genres/${genre_name}/random_song`);
 }
 
 export default new Service();
