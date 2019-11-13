@@ -2,45 +2,17 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loadArtists } from "../../actions/artist_actions";
-import textFormat from "../../utils/formatText";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
-import { Link } from "react-router-dom";
+import Artist from '../../components/artist'
 import Grid from "@material-ui/core/Grid";
-import styles from "./list.scss";
+import styles from "./styles.scss";
 
 export class List extends Component {
   componentDidMount() {
     this.props.loadArtists();
   }
 
-  renderList = artists =>
-    artists.map(artist => (
-      <Grid item xs={3} key={artist.id}>
-        <Card className={styles.artist_list_item} >
-          <Link to={`/artists/${artist.id}`} >
-            <CardActionArea className={styles.card_link}>
-              <CardMedia
-                className={styles.artist_list_media}
-                image={artist.image}
-                title={artist.name}
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {artist.name}
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Genres:{" "}
-                  {artist.genres.map(genre => textFormat(genre)).join(", ")}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-          </Link>
-        </Card>
-      </Grid>
+  renderList = artists => artists.map(artist => (
+      <Artist artist={artist} key={artist.id}/>
     ));
 
   render() {
@@ -61,11 +33,13 @@ export class List extends Component {
 }
 
 List.propTypes = {
-  list: PropTypes.array
+  list: PropTypes.array,
+  loading: PropTypes.bool
 };
 
 List.defaultProps = {
-  list: []
+  list: [],
+  loading: false
 };
 
 const mapStateToProps = state => ({

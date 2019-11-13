@@ -11,6 +11,8 @@ class Service {
 
   getArtists = () => this.api.get("/artists");
 
+  getArtistById = artist_id => this.api.get(`artists/${artist_id}`);
+
   getArtistAlbums = artist_id => this.api.get(`artists/${artist_id}/albums`);
 
   getAlbumSongs = album_id => this.api.get(`albums/${album_id}/songs`);

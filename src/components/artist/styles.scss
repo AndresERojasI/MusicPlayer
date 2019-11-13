@@ -1,17 +1,16 @@
-.list{
-    flex-grow: 1;
-}
-
 .artist_list_item {
     text-align: center;
-    height: 300px;
 }
 
 .artist_list_media {
-    height: 150px;
+    height: 250px;
 }
 
 .card_link {
     text-decoration: none;
     height: 100%;
+}
+
+.genre_chip{
+    padding: 3px;
 }

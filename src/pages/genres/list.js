@@ -22,13 +22,13 @@ export class List extends Component {
         <Card className={styles.artist_list_item}>
           <CardActionArea>
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {textFormat(genre)}
-              </Typography>
+              <Link to={`/genres/${genre.trim()}`}>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {textFormat(genre)}
+                </Typography>
+              </Link>
               <Typography variant="body2" color="textSecondary" component="p">
-                <Link to={`/genres/${genre.trim()}`}>
-                  Play Random Song
-                </Link>
+                <Link to={`/genres/${genre.trim()}`}>Play Random Song</Link>
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -49,7 +49,7 @@ export class List extends Component {
           {genresList}
         </Grid>
       </div>
-    )
+    );
   }
 }
 
